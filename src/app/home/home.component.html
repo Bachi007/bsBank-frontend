@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-10">
+            <button class="bank-btn">
+                <label for="">Create Account</label>
+            </button>
+            <button class="bank-btn" (click)="savings()">
+                <label for="">Savings Account</label>
+            </button>
+            <button class="bank-btn" (click)="fd()">
+                <label for="">Fixed Deposit</label>
+            </button>
+            <button class="bank-btn" (click)="rd()">
+                <label for="">Reccuring Deposit</label>
+            </button>
+            <button class="bank-btn" (click)="loan()">
+                <label for="">Available Loans</label>
+            </button>
+        </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" *ngIf="savingsflag">
+            <h3>Savings Account</h3>
+        </div>
+        <div class="col-md-10" *ngIf="fdflag">
+            <h3>Fixed Deposit Account</h3>
+        </div>
+        <div class="col-md-10" *ngIf="rdflag">
+            <h3>Reccuring Deposit Account</h3>
+        </div>
+        <div class="col-md-10" *ngIf="loanflag">
+            <h3>Available Loans</h3>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8" *ngIf="savingsflag">
+            <table class="table table-success table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>FullName</th>
+                        <th>AccNum</th>
+                        <th>Acc Balance</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tr *ngFor="let acc of savingAcc">
+                    <td>{{acc.fullName}}</td>
+                    <td>{{acc.accountNum}}</td>
+                    <td>{{acc.accountBalance}}</td>
+                    <td>{{acc.phone}}</td>
+                    <td>{{acc.email}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>

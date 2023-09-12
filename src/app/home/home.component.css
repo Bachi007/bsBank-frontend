@@ -1,0 +1,14 @@
+.bank-btn{
+   background-color: #093578;
+   color: #fff;
+   padding: 5px;
+   border: 1px solid white;
+   border-radius: 25px;
+   
+}
+label{
+    border:1px double white;
+    padding: 10px;
+    border-radius: 25px;
+   
+}

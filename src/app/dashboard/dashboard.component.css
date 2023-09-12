@@ -1,0 +1,32 @@
+
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .bsbank{
+    font-family: 'Black Ops One';
+    font-size: 40px;
+  }
+
+mat-sidenav {
+    width: 280px;
+    padding:15px;
+}
+.mat-drawer { 
+    background-color: #093578;
+    color:#fff
+}
+.main-content {
+    padding:20px;
+}
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+
+li{
+    list-style-type: none;
+}

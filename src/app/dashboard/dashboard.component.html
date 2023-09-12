@@ -1,0 +1,41 @@
+<mat-sidenav-container fullscreen>
+    <mat-sidenav mode="side" #sidenav opened position="start">
+
+        <span class="menu-spacer"></span>
+        <ul>
+            <li><a  class="text-white" mat-button [routerLink]="'/admin/home'"> Dashboard </a></li>
+            <li><a  class="text-white" mat-button [routerLink]="'/admin/savings'"> Savings Accounts </a></li>
+            <li><a class="text-white" mat-button [routerLink]="'/admin/fixed'"> Fixed Deposit </a></li>
+            <li><a class="text-white" mat-button [routerLink]="'/admin/reccuring'"> Reccuring Deposit </a></li>
+            <li> <a class="text-white" mat-button [routerLink]="'/admin/loans'"> Loans </a></li>
+            <li> <a class="text-white" mat-button [routerLink]="'/admin/users'"> Users </a></li>
+        </ul>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+
+            <h1 class="bsbank">B S Bank</h1>
+            <span class="toolbar-spacer"></span>
+            <div class="dropdown">
+                <button class="btn  dropdown-toggle text-white" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  User Account
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" routerLink="#">Logout <i class="fa fa-sign-out"></i></a>
+                </div>
+              </div>
+        </mat-toolbar>
+        <div class="main-content">
+          
+            <div class="container">
+              
+
+            </div>
+
+        </div>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
